@@ -57,7 +57,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html" >Accueil</a></li>
-          <li><a href="index.html#why-us">Apropos</a></li>
+          <li><a href="index.html#why-us">À propos</a></li>
           <!-- .navbar <li><a href="services.html">Services</a></li>-->
           <li><a href="interviews.html" class="active">Nos interventions</a></li>
           <!--<li><a href="portfolio.html">Blog</a></li>-->
@@ -77,7 +77,7 @@
 
         <h2>Interviews</h2>
         <ol>
-          <li><a href="index.html">accueil</a></li>
+          <li><a href="index.html">Accueil</a></li>
           <li>Interviews</li>
         </ol>
 
@@ -90,7 +90,7 @@
         <span id="getAllblogs"></span>
         <div class="row g-5">
 
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-8 col-md-6" data-aos="fade-up" data-aos-delay="200">
 
             <div class="row gy-5 posts-list">
               <span id="idtheAllProForsite"></span>
@@ -435,11 +435,10 @@
             trow.setAttribute("style", " margin: 20px;display: flex;align-items: center;flex-direction: column;justify-content: space-between;flex-wrap: wrap;");
             trow.innerHTML =
               `
-              <div class="col-lg-12">
                 <article class="d-flex flex-column">
 
-                  <div class="post-img" >
-                    ${k.RollNo}
+                  <div class="post-img">
+                    <iframe width="65%" height="315" src="${k.RollNo}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                   </div>
 
                   <h2 class="title" style="width:580px">
@@ -448,13 +447,13 @@
 
                   <div class="meta-top">
                     <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">${k.Category}</a></li>
+                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#" >${k.Category}</a></li>
                       <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">${k.Datetime}</time></a></li>
                     </ul>
                   </div>
 
                   <div class="content">
-                    <p style="width:580px;">
+                    <p style="width:400px; text-align: justify;">
                       ${k.Genboxtextarea}
                     </p>
                   </div>
@@ -464,7 +463,7 @@
                   </div>   
 
                 </article>
-              </div><!-- End post list item -->            
+                <!-- End post list item -->            
             `
             divq.append(trow)
           })
