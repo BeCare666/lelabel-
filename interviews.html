@@ -85,7 +85,9 @@
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog">
+    <span id="idtheAllProForsite"></span>
+
+    <section id="blog" class="blog" style="display: none;">
       <div class="container" data-aos="fade-up">
         <span id="getAllblogs"></span>
         <div class="row g-5">
@@ -93,7 +95,7 @@
           <div class="col-lg-8 col-md-6" data-aos="fade-up" data-aos-delay="200">
 
             <div class="row gy-5 posts-list">
-              <span id="idtheAllProForsite"></span>
+             
             </div><!-- End blog posts list 
 
             <div class="blog-pagination">
@@ -442,14 +444,13 @@
                   </div>
 
                   <h2 class="title" style="width:580px">
-                    <a href="blog-details.html">${k.NameOfstd}</a>
+                    <a href="#">${k.NameOfstd}</a>
                   </h2>
 
                   <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#" >${k.Category}</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">${k.Datetime}</time></a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#" >Diplomatie</a></li>
+                    <ul style="display:flex">
+                      <li class="d-flex align-items-center"><i class="bi bi-person"></i>&nbsp; <a href="#" >${k.Category}</a></li> &nbsp;&nbsp; 
+                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i>&nbsp; <a href="#"><time datetime="2022-01-01">${k.Datetime}</time></a></li>&nbsp;&nbsp;
                     </ul>
                   </div>
 
