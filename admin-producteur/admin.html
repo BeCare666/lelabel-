@@ -185,11 +185,12 @@
                                     <div class="modal-body">
                                         <form>
                                             <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Nom du
-                                                    produit:</label>
+                                                <label for="recipient-name" class="col-form-label">Nom de
+                                                    l'interview:</label>
                                                 <input type="text" class="form-control" id="recipient-name1">
-                                                <label for="recipient-name" class="col-form-label">Code de la
-                                                    vidéo:</label>
+                                                <label for="recipient-name" class="col-form-label" style="display: flex;">Code de la
+                                                    vidéo:<p id="textToCopy">embed/</p>&nbsp;<button id="copyButton">Copier</button></label><!-- HTML -->
+                                                    <span> </span>                                                    
                                                 <input type="text" class="form-control" id="recipient-name2">
                                                 <!-- Actions  <label for="recipient-name" class="col-form-label">Prix Promo:</label>
                                                 <input type="tel" class="form-control" id="recipient-name3">
@@ -199,12 +200,12 @@
                                                 <select id="exampleFormControlSelect1" class="form-control"
                                                     style="height: 50px;">
                                                     <option selected>....</option>
-                                                    <option value="Beauté, cosmétique & soins">Beauté, cosmétique &
-                                                        soins</option>
+                                                    <option value="Beauté, cosmétique & soins">La Politique</option>
                                                     <option value="Agriculture">Agriculture</option>
                                                     <option value="Agro-alimentaire">Agro-alimentaire</option>
                                                     <option value="Informatique">Informatique</option>
                                                     <option value="Autres">Autres</option>
+                                                    <option value="Autres">L'économie</option>
                                                 </select>
 
                                             </div>
@@ -227,7 +228,27 @@
                                 </div>
                             </div>
                         </div>
+                        <script>
+                            const copyButton = document.getElementById("copyButton");
+                            const textToCopy = document.getElementById("textToCopy");
 
+                            copyButton.addEventListener("click", function() {
+                            // Sélectionne le texte à copier
+                            const range = document.createRange();
+                            range.selectNode(textToCopy);
+                            window.getSelection().removeAllRanges();
+                            window.getSelection().addRange(range);
+
+                            // Copie le texte sélectionné
+                            document.execCommand("copy");
+
+                            // Désélectionne le texte
+                            window.getSelection().removeAllRanges();
+
+                            // Affiche un message de confirmation
+                            alert("Le texte a été copié !");
+                            });
+                        </script>
                         <!--Modal blogs-->
                         <div class="modal fade" id="exampleModalblogs" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
