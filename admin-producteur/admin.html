@@ -965,9 +965,7 @@
                                     `
                 }
             });
-            setTimeout(() => {
-                getAllDataRealtimeMessages()
-            }, 2000)
+           
         }
 
 
@@ -1003,7 +1001,6 @@
                 });
                 if (myalldatasM[0]) {
                     return myalldatasM.forEach((q) => {
-
                         let trow = document.createElement("li");
                         trow.addEventListener('click', function () {
                             trow.id = `${q.Idproduct}`
