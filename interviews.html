@@ -437,15 +437,15 @@
             //trow.setAttribute("style", " margin: 20px;display: flex;align-items: center;flex-direction: column;justify-content: space-between;flex-wrap: wrap;");
             trow.innerHTML =
               `
-                <article class="d-flex flex-column">
+                <article class="d-flex flex-column" style="border: 2px solid royalblue; box-shadow: #03202e 23px;">
 
                   <div class="post-img">
                     <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/${k.RollNo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                   </div>
-
-                  <h2 class="title">
+                  <div  style="margin: 10px;">
+                    <h2 class="title">
                     <a href="#">${k.NameOfstd}</a>
                   </h2>
 
@@ -462,6 +462,7 @@
                     </p>
                     <div class="read-more mt-auto align-self-end">
                     <a href="https://lelabeldiplomatique.com/d/HA1679231075.95664170863e96670.29607395">En savoir plus sur les magazines <i class="bi bi-arrow-right"></i></a>
+                  </div>
                   </div>   
                   </div>
                   <style>
