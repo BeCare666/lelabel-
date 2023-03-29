@@ -188,8 +188,8 @@
                                                 <label for="recipient-name" class="col-form-label">Nom de
                                                     l'interview:</label>
                                                 <input type="text" class="form-control" id="recipient-name1">
-                                                <label for="recipient-name" class="col-form-label" style="display: flex;">Code de la
-                                                    vidéo:<p id="textToCopy">embed/</p>&nbsp;<button id="copyButton">Copier</button></label><!-- HTML -->
+                                                <label for="recipient-name" class="col-form-label">Code de la
+                                                    vidéo:</label><!-- HTML -->
                                                     <span> </span>                                                    
                                                 <input type="text" class="form-control" id="recipient-name2">
                                                 <!-- Actions  <label for="recipient-name" class="col-form-label">Prix Promo:</label>
@@ -228,27 +228,6 @@
                                 </div>
                             </div>
                         </div>
-                        <script>
-                            const copyButton = document.getElementById("copyButton");
-                            const textToCopy = document.getElementById("textToCopy");
-
-                            copyButton.addEventListener("click", function() {
-                            // Sélectionne le texte à copier
-                            const range = document.createRange();
-                            range.selectNode(textToCopy);
-                            window.getSelection().removeAllRanges();
-                            window.getSelection().addRange(range);
-
-                            // Copie le texte sélectionné
-                            document.execCommand("copy");
-
-                            // Désélectionne le texte
-                            window.getSelection().removeAllRanges();
-
-                            // Affiche un message de confirmation
-                            alert("Le texte a été copié !");
-                            });
-                        </script>
                         <!--Modal blogs-->
                         <div class="modal fade" id="exampleModalblogs" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
